@@ -21,7 +21,7 @@ void SceneManager::LoadScene() {
     FILE *f = fopen("scene1.scene", "rb");
     if(f == NULL)
     {
-        std::cout << "Could not load " << "scene1.scene" << std::endl;
+        cout << "Could not load " << "scene1.scene" << endl;
         return;
     }
 
@@ -45,11 +45,11 @@ void SceneManager::LoadScene() {
         _sceneChunks[i].y = 300;
     }
 
-    std::cout << "Scene name " << _scene.header.name << " |Data length " << _scene.header.dataLength << " |ChunkNumber " << _scene.header.chuncksNumber << std::endl;
+    cout << "Scene name " << _scene.header.name << " |Data length " << _scene.header.dataLength << " |ChunkNumber " << _scene.header.chuncksNumber << endl;
 
     ConvertSceneToGameObjects();
 
-    std::cout << "Scene loaded " << "scene1.scene" << std::endl;
+    cout << "Scene loaded " << "scene1.scene" << endl;
 }
 
 void SceneManager::UnloadScene() {
@@ -60,7 +60,7 @@ void SceneManager::UploadScene() {
 
     if(f == NULL)
     {
-        std::cout << "Missing file, unable to read it" << std::endl;
+        cout << "Missing file, unable to read it" << endl;
         return;
     }
 
@@ -84,7 +84,7 @@ void SceneManager::UploadScene() {
     fwrite(data, sizeof(SceneData), _scene.header.dataLength, f);
     fclose(f);
 
-    std::cout << "Scene created scene1.scene" << std::endl;
+    cout << "Scene created scene1.scene" << endl;
 }
 
 void SceneManager::ConvertSceneToGameObjects() {
@@ -107,18 +107,18 @@ void SceneManager::ConvertSceneToGameObjects() {
         }
     }
 
-    std::cout << "Scene converted to gameObjects" << std::endl;
+    cout << "Scene converted to gameObjects" << endl;
 }
 
 Scene SceneManager::GetActiveScene() {
-    std::cout << _currentScene.header.name << std::endl;
-    std::cout << _currentScene.header.dataLength << std::endl;
+    cout << _currentScene.header.name << endl;
+    cout << _currentScene.header.dataLength << endl;
     return _currentScene;
 }
 
 GameObject SceneManager::GetGameObjects(int _index) {
     if(_index > sizeof(_sceneGameObjects)) {
-        std::cout << "Impossible to get gameobject at ID"  << _index << std::endl;
+        cout << "Impossible to get gameobject at ID"  << _index << endl;
         return GameObject();
     }
 

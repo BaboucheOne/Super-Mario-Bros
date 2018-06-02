@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
 	_sceneManager.UploadScene();
 	_sceneManager.LoadScene();
 	Chunk c = _sceneManager.GetChunckByID(0);
-	std::cout << c.gameobject.size() << std::endl;
+	cout << c.gameobject.size() << endl;
 	_rendererManager.SendChunk(c);
 
     bool running = true;

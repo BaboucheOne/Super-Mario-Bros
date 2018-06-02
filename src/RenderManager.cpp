@@ -11,13 +11,13 @@ RenderManager::RenderManager(unsigned int _width, unsigned int _height) : width(
 void RenderManager::Init() {
 
     if (SDL_VideoInit(NULL) < 0) {
-		std::cout << "Can't create SDL video " << SDL_GetError() << std::endl;
+		cout << "Can't create SDL video " << SDL_GetError() << endl;
 		return;
 	}
 
     window = SDL_CreateWindow("Scene loader", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, height, width, SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL);
 	if (window == NULL) {
-		std::cout << "Error when creating window" << SDL_GetError() << std::endl;
+		cout << "Error when creating window" << SDL_GetError() << endl;
 		return;
 	}
 
@@ -80,13 +80,13 @@ void RenderManager::SendChunk(Chunk _chunk) {
         SDL_Surface* surface = SDL_LoadBMP(go.GetTexture());
 
         if(surface == NULL) {
-            std::cout << SDL_GetError() << std::endl;
+            cout << SDL_GetError() << endl;
         }
 
         SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
 
         if(texture == NULL) {
-            std::cout << SDL_GetError() << std::endl;
+            cout << SDL_GetError() << endl;
         }
 
         new_element.rects.push_back(rect);
