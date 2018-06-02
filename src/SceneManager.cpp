@@ -39,7 +39,7 @@ void SceneManager::LoadScene() {
     _currentScene = _scene;
 
     _sceneChunks = new Chunk[_scene.header.chuncksNumber]; //Allocate space for chunks
-    for(unsigned int i = 0; i < _scene.header.chuncksNumber; i++) { //Fill chunks
+    for(int i = 0; i < _scene.header.chuncksNumber; i++) { //Fill chunks
         _sceneChunks[i].ID = i;
         _sceneChunks[i].x = 425 + i * 425;
         _sceneChunks[i].y = 300;
@@ -66,19 +66,16 @@ void SceneManager::UploadScene() {
 
     Scene _scene;
 
-    _scene.header.name = new char[40];
     _scene.header.name = "Scene";
     _scene.header.dataLength = 10;
     _scene.header.chuncksNumber = 10;
 
-    _scene.data = new SceneData[_scene.header.dataLength];
-
     SceneData data[_scene.header.dataLength];
-    for(unsigned int i = 0; i < 10; i++) {
+    for(int i = 0; i < 10; i++) {
         data[i].x = i * 2.0f;
         data[i].y = i * 2.0f;
         data[i].scale = 64;
-        data[i].texture = "Textures/eagle.bmp";
+        data[i].texture = "textures/eagle.bmp";
     }
 
     _scene.data = data;
@@ -95,13 +92,13 @@ void SceneManager::ConvertSceneToGameObjects() {
     int chunkNumber = _currentScene.header.chuncksNumber;
     _sceneGameObjects = new GameObject[dataLength];
 
-    for(unsigned int i = 0; i < dataLength; i++) {
+    for(int i = 0; i < dataLength; i++) {
         SceneData sceneData = _currentScene.data[i];
 
         GameObject go = GameObject(sceneData.x, sceneData.y, sceneData.texture);
         _sceneGameObjects[i] = go;
 
-        for(unsigned int j = 0; j < chunkNumber; j++) {
+        for(int j = 0; j < chunkNumber; j++) {
             Chunk chunk = _sceneChunks[j];
             if(sqrt(pow(go.GetX() - chunk.x,2) + pow(go.GetY() - chunk.y,2)) <= 212.5) {
                 chunk.gameobject.push_back(go);
