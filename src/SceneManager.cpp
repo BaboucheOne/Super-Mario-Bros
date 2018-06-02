@@ -78,7 +78,6 @@ void SceneManager::UploadScene() {
         data[i].x = i * 2.0f;
         data[i].y = i * 2.0f;
         data[i].scale = 64;
-        data[i].texture = new char[40];
         data[i].texture = "Textures/eagle.bmp";
     }
 
