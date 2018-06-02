@@ -1,0 +1,86 @@
+#include "SceneManager.h"
+#include "RenderManager.h"
+
+using namespace std;
+
+static SDL_Window* window;
+static SDL_Renderer* renderer;
+
+int main(int argc, char *argv[]) {
+
+	int height = 800;
+	int width = 1250;
+
+	if (SDL_VideoInit(NULL) < 0) {
+		cout << "Can't create SDL video " << SDL_GetError() << endl;
+		return EXIT_FAILURE;
+	}
+
+	window = SDL_CreateWindow("Scene loader", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL);
+	if (window == NULL) {
+		cout << "Error when creating window" << SDL_GetError() << endl;
+		return EXIT_FAILURE;
+	}
+
+	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+
+	bool running = true;
+	SDL_Event event;
+
+    SceneManager _sceneManager;
+	//_sceneManager.UploadScene();
+	_sceneManager.LoadScene();
+	//_sceneManager.GetActiveScene();
+
+
+    GameObject go = _sceneManager.GetGameObjects(0);
+
+	SDL_Surface *img = SDL_LoadBMP(go.GetTexture());
+	if (img == NULL) {
+		cout << "Error when loading img " << SDL_GetError() << endl;
+	}
+
+	SDL_Texture *text_img = SDL_CreateTextureFromSurface(renderer, img);
+
+	if (text_img == NULL ) {
+		cout << "Error when loading texture img " << SDL_GetError() << endl;
+	}
+
+	SDL_FreeSurface(img); //Delete it.
+
+	while (running) {
+
+		while (SDL_PollEvent(&event)) {
+
+			switch (event.type) {
+
+			case SDL_QUIT:
+				running = false;
+				break;
+
+			}
+		}
+
+		SDL_RenderClear(renderer);
+
+        /*
+        int posX = 0;
+        int posY = 0;
+		SDL_Rect dest = {posX, posY, 64, 64};
+		SDL_RenderCopy(renderer,text_img,NULL,&dest);
+		*/
+
+		SDL_SetRenderDrawColor(renderer, 25, 25, 25, 255); //Background color.
+		SDL_RenderPresent(renderer);
+	}
+
+	SDL_FreeSurface(img);
+	SDL_DestroyTexture(text_img);
+
+	SDL_DestroyRenderer(renderer);
+	SDL_DestroyWindow(window);
+	SDL_Quit();
+
+	return EXIT_SUCCESS;
+}
+
