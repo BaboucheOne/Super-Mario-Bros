@@ -53,7 +53,7 @@ class SceneManager
 
         void LoadScene();
         void UnloadScene();
-        void UploadScene();
+        void CreateScene();
 
         Chunk GetChunckByID(int _id);
         Chunk GetChunck(int _index);
@@ -63,8 +63,8 @@ class SceneManager
     protected:
 
     private:
-        vector<Chunk>_sceneChunks;
-        void ConvertSceneToGameObjects();
+        string name;
+        vector<Chunk> _sceneChunks;
 };
 
 #endif // SCENEMANAGER_H

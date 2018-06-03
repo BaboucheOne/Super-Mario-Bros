@@ -66,7 +66,7 @@ void SceneManager::LoadScene() {
 void SceneManager::UnloadScene() {
 }
 
-void SceneManager::UploadScene() {
+void SceneManager::CreateScene() {
     ofstream f;
     f.open("scene1.scene");
     if( !f.is_open() )
@@ -76,7 +76,7 @@ void SceneManager::UploadScene() {
     }
 
     StringBuffer sb;
-    PrettyWriter<StringBuffer> writer(sb);
+    PrettyWriter<StringBuffer> writer( sb );
 
     writer.StartObject();
 
@@ -106,8 +106,8 @@ void SceneManager::UploadScene() {
         Chunk chunk;
 
         chunk.ID = i;
-        chunk.x = i * 2.0;
-        chunk.y = i * 2.0;
+        chunk.x = 425 + i * 425;
+        chunk.y = 300;
 
         for ( int i = 0; i < 10;  i++ )
         {

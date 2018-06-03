@@ -24,8 +24,8 @@ class Sprite
         void SetPosition(float _x, float _y);
         void SetScale( int _scale );
         void SetTexture( std::string _texturePath);
-        template <typename Writer>
-        void Serialize( Writer& writer );
+
+        void Serialize( PrettyWriter<StringBuffer>& writer );
 
 
         float GetX();

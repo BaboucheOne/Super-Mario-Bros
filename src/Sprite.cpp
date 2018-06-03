@@ -39,14 +39,14 @@ void Sprite::SetScale( int _scale )
 {
     scale = _scale;
 }
-template <typename Writer>
-void Sprite::Serialize( Writer& writer )
+
+void Sprite::Serialize( PrettyWriter<StringBuffer>& writer )
 {
     writer.StartObject();
     writer.String("x");
-    writer.Float( x );
+    writer.Double( x );
     writer.String("y");
-    writer.Float( y );
+    writer.Double( y );
     writer.String("scale");
     writer.Int( scale );
     writer.String("textures");

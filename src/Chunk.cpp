@@ -28,8 +28,8 @@ Chunk::Chunk(const Chunk& c)
     y = c.y;
     sprite.assign( c.sprite.begin(), c.sprite.end() );
 }
-template <typename Writer>
-void Chunk::Serialize( Writer& writer )
+
+void Chunk::Serialize( PrettyWriter<StringBuffer>& writer )
 {
     writer.StartObject();
     writer.String("ID");

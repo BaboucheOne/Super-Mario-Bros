@@ -16,8 +16,7 @@ class Chunk {
         Chunk( int _ID,int _x, int _y);
         Chunk( const Chunk& c);
         virtual ~Chunk();
-        template <typename Writer>
-        void Serialize( Writer& writer );
+        void Serialize( PrettyWriter<StringBuffer>& writer );
 
         int ID;
         int x;
