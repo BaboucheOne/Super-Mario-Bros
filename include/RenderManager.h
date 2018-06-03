@@ -8,7 +8,6 @@
 struct ElementsInChunk {
     Chunk chunk;
     vector<SDL_Rect> rects;
-    vector<SDL_Surface*> surfaces;
     vector<SDL_Texture*> textures;
 };
 

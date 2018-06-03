@@ -1,9 +1,0 @@
-Structure de .scene:
-
-char* name
-gameobject objects;
-
-
-gameobject:
-pos X | Y
-scale

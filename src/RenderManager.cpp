@@ -90,10 +90,9 @@ void RenderManager::SendChunk(Chunk _chunk) {
         }
 
         new_element.rects.push_back(rect);
-        new_element.surfaces.push_back(surface);
         new_element.textures.push_back(texture);
 
-        //SDL_FreeSurface(surface);
+        SDL_FreeSurface(surface);
     }
 
     _visibleChuncks.push_back(new_element);

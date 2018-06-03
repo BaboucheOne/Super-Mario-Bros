@@ -581,3 +581,150 @@
 	"rapidjson/prettywriter.h"
 	"Chunk.h"
 
+1528053492 source:c:\users\admin\documents\github\super-mario-bros\main.cpp
+	<fstream>
+	<iostream>
+	<vector>
+	<math.h>
+	<list>
+	<stdlib.h>
+	<sys/stat.h>
+	<SDL2/SDL.h>
+	<cstdio>
+	"Sprite.h"
+	"Global.h"
+	"SceneManager.h"
+	"RenderManager.h"
+
+1528051995 c:\users\admin\documents\github\super-mario-bros\include\sprite.h
+	<fstream>
+	<iostream>
+	<string>
+	<SDL2/SDL.h>
+	<sys/stat.h>
+	<stdlib.h>
+	"rapidjson/prettywriter.h"
+
+1528051995 c:\users\admin\documents\github\super-mario-bros\include\rapidjson\prettywriter.h
+	"writer.h"
+
+1528051995 c:\users\admin\documents\github\super-mario-bros\include\rapidjson\writer.h
+	"stream.h"
+	"internal/meta.h"
+	"internal/stack.h"
+	"internal/strfunc.h"
+	"internal/dtoa.h"
+	"internal/itoa.h"
+	"stringbuffer.h"
+	<new>
+	<intrin.h>
+	<nmmintrin.h>
+	<emmintrin.h>
+	<arm_neon.h>
+
+1528051995 c:\users\admin\documents\github\super-mario-bros\include\rapidjson\stream.h
+	"rapidjson.h"
+	"encodings.h"
+
+1528051995 c:\users\admin\documents\github\super-mario-bros\include\rapidjson\rapidjson.h
+	<cstdlib>
+	<cstring>
+	"rapidjson/..."
+	<string>
+	"msinttypes/stdint.h"
+	"msinttypes/inttypes.h"
+	<stdint.h>
+	<inttypes.h>
+	<endian.h>
+	"rapidjson/..."
+	<cassert>
+
+1528051995 c:\users\admin\documents\github\super-mario-bros\include\rapidjson\msinttypes\stdint.h
+	<stdint.h>
+	<limits.h>
+	<wchar.h>
+
+1528051995 c:\users\admin\documents\github\super-mario-bros\include\rapidjson\msinttypes\inttypes.h
+	"stdint.h"
+	<inttypes.h>
+
+1528051995 c:\users\admin\documents\github\super-mario-bros\include\rapidjson\encodings.h
+	"rapidjson.h"
+
+1528051995 c:\users\admin\documents\github\super-mario-bros\include\rapidjson\internal\meta.h
+	"../rapidjson.h"
+	<type_traits>
+
+1528051995 c:\users\admin\documents\github\super-mario-bros\include\rapidjson\internal\stack.h
+	"../allocators.h"
+	"swap.h"
+
+1528051995 c:\users\admin\documents\github\super-mario-bros\include\rapidjson\allocators.h
+	"rapidjson.h"
+
+1528051995 c:\users\admin\documents\github\super-mario-bros\include\rapidjson\internal\swap.h
+	"../rapidjson.h"
+
+1528051995 c:\users\admin\documents\github\super-mario-bros\include\rapidjson\internal\strfunc.h
+	"../stream.h"
+	<cwchar>
+
+1528051995 c:\users\admin\documents\github\super-mario-bros\include\rapidjson\internal\dtoa.h
+	"itoa.h"
+	"diyfp.h"
+	"ieee754.h"
+
+1528051995 c:\users\admin\documents\github\super-mario-bros\include\rapidjson\internal\itoa.h
+	"../rapidjson.h"
+
+1528051995 c:\users\admin\documents\github\super-mario-bros\include\rapidjson\internal\diyfp.h
+	"../rapidjson.h"
+	<intrin.h>
+
+1528051995 c:\users\admin\documents\github\super-mario-bros\include\rapidjson\internal\ieee754.h
+	"../rapidjson.h"
+
+1528051995 c:\users\admin\documents\github\super-mario-bros\include\rapidjson\stringbuffer.h
+	"stream.h"
+	"internal/stack.h"
+	<utility>
+	"internal/stack.h"
+
+1528051995 c:\users\admin\documents\github\super-mario-bros\include\global.h
+
+1528051995 c:\users\admin\documents\github\super-mario-bros\include\scenemanager.h
+	<fstream>
+	<iostream>
+	<vector>
+	<stdlib.h>
+	"Chunk.h"
+	"Sprite.h"
+
+1528051995 c:\users\admin\documents\github\super-mario-bros\include\chunk.h
+	"rapidjson/prettywriter.h"
+	<string>
+	<vector>
+	"Sprite.h"
+
+1528053885 c:\users\admin\documents\github\super-mario-bros\include\rendermanager.h
+	<vector>
+	"Chunk.h"
+
+1528051995 source:c:\users\admin\documents\github\super-mario-bros\src\chunk.cpp
+	"rapidjson/prettywriter.h"
+	"Chunk.h"
+
+1528051995 source:c:\users\admin\documents\github\super-mario-bros\src\rendermanager.cpp
+	"RenderManager.h"
+
+1528051995 source:c:\users\admin\documents\github\super-mario-bros\src\scenemanager.cpp
+	"SceneManager.h"
+	<string>
+	<cstdio>
+	<math.h>
+	<stdio.h>
+	"rapidjson/prettywriter.h"
+
+1528051995 source:c:\users\admin\documents\github\super-mario-bros\src\sprite.cpp
+	"Sprite.h"
+

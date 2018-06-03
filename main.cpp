@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
     SceneManager _sceneManager;
 	_sceneManager.CreateScene();
 	//_sceneManager.LoadScene();
-	Chunk c = _sceneManager.GetChunckByID(0);
+	Chunk c = _sceneManager.GetChunckByID(2);
 	cout << c.sprite.size() << endl;
 	_rendererManager.SendChunk(c);
 
