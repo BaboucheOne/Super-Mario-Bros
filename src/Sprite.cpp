@@ -1,5 +1,7 @@
 #include "Sprite.h"
 
+using namespace rapidjson;
+
 Sprite::Sprite() : x(0), y(0), scale(64), texture("") {
     SetTexture("Textures/missing.bmp");
 }

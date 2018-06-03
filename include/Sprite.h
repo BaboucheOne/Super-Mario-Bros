@@ -10,7 +10,6 @@
 #include <stdlib.h>
 
 #include "rapidjson/prettywriter.h"
-using namespace rapidjson;
 
 class Sprite
 {
@@ -25,7 +24,7 @@ class Sprite
         void SetScale( int _scale );
         void SetTexture( std::string _texturePath);
 
-        void Serialize( PrettyWriter<StringBuffer>& writer );
+        void Serialize( rapidjson::PrettyWriter<rapidjson::StringBuffer>& writer );
 
 
         float GetX();

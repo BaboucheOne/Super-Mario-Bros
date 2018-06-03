@@ -9,7 +9,7 @@
 #include "rapidjson/prettywriter.h"
 
 using namespace rapidjson;
-
+using namespace std;
 /*
 
     Chunks:

@@ -10,7 +10,6 @@
 #include "Chunk.h"
 #include "Sprite.h"
 
-using namespace std;
 
 /*
 
@@ -31,18 +30,18 @@ struct SceneData {
     float x;
     float y;
     int scale;
-    string texture; //Texture path.
+    std::string texture; //Texture path.
 };
 
 struct SceneHeader {
-    string name;
+    std::string name;
     int dataLength; //Length of SceneData's array.
     int chuncksNumber; //How many chunks.
 };
 
 struct Scene {
     SceneHeader header;
-    vector<SceneData> data;
+    std::vector<SceneData> data;
 };
 
 class SceneManager
@@ -63,8 +62,8 @@ class SceneManager
     protected:
 
     private:
-        string name;
-        vector<Chunk> _sceneChunks;
+        std::string name;
+        std::vector<Chunk> _sceneChunks;
 };
 
 #endif // SCENEMANAGER_H

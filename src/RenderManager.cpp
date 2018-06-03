@@ -1,5 +1,7 @@
 #include "RenderManager.h"
 
+using namespace std;
+
 RenderManager::RenderManager() : width(600), height(850)
 {
     Init();

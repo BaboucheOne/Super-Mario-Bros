@@ -13,8 +13,8 @@
 
 struct ElementsInChunk {
     Chunk chunk;
-    vector<SDL_Rect> rects;
-    vector<SDL_Texture*> textures;
+    std::vector<SDL_Rect> rects;
+    std::vector<SDL_Texture*> textures;
 };
 
 class RenderManager
@@ -38,7 +38,7 @@ class RenderManager
         unsigned int height;
         SDL_Window* window;
         SDL_Renderer* renderer;
-        vector<ElementsInChunk> _visibleChuncks;
+        std::vector<ElementsInChunk> _visibleChuncks;
 
         void Init();
         bool CheckChunkEquality(Chunk _chunk); //Is this chunk already in the vector "_visibleChuncks" ?

@@ -8,20 +8,18 @@
 
 #include "Sprite.h"
 
-using namespace std;
-using namespace rapidjson;
 class Chunk {
     public:
         Chunk();
         Chunk( int _ID,int _x, int _y);
         Chunk( const Chunk& c);
         virtual ~Chunk();
-        void Serialize( PrettyWriter<StringBuffer>& writer );
+        void Serialize( rapidjson::PrettyWriter<rapidjson::StringBuffer>& writer );
 
         int ID;
         int x;
         int y;
-        vector <Sprite> sprite;
+        std::vector <Sprite> sprite;
 
     protected:
 
