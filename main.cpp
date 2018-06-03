@@ -1,7 +1,24 @@
+
+#include <fstream>
+#include <iostream>
+#include <vector>
+#include <math.h>
+#include <list>
+#include <stdlib.h>
+#include <sys/stat.h>
+#include <SDL2/SDL.h>
+#include <cstdio>
+
+using namespace std;
+
+
+
+#include "Sprite.h"
+#include "Global.h"
 #include "SceneManager.h"
 #include "RenderManager.h"
 
-using namespace std;
+
 
 int main(int argc, char *argv[]) {
 
@@ -9,9 +26,9 @@ int main(int argc, char *argv[]) {
 
     SceneManager _sceneManager;
 	_sceneManager.UploadScene();
-	_sceneManager.LoadScene();
+	//_sceneManager.LoadScene();
 	Chunk c = _sceneManager.GetChunckByID(0);
-	cout << c.gameobject.size() << endl;
+	cout << c.sprite.size() << endl;
 	_rendererManager.SendChunk(c);
 
     bool running = true;
@@ -29,7 +46,6 @@ int main(int argc, char *argv[]) {
 				break;
 			}
 		}
-
         _rendererManager.Update();
     }
 

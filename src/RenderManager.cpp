@@ -67,17 +67,17 @@ void RenderManager::SendChunk(Chunk _chunk) {
 
     if(!CheckChunkEquality(_chunk)) { return; }
 
-    unsigned int goSize = _chunk.gameobject.size();
+    unsigned int goSize = _chunk.sprite.size();
 
     ElementsInChunk new_element;
     new_element.chunk = _chunk;
 
     for(unsigned int i = 0; i < goSize; i++) {
-        GameObject go = _chunk.gameobject.at(i);
+        Sprite go = _chunk.sprite.at(i);
         unsigned scale = go.GetScale();
 
         SDL_Rect rect = {go.GetX(), go.GetX(), scale, scale};
-        SDL_Surface* surface = SDL_LoadBMP(go.GetTexture());
+        SDL_Surface* surface = SDL_LoadBMP(go.GetTexture().c_str());
 
         if(surface == NULL) {
             cout << SDL_GetError() << endl;

@@ -1,5 +1,15 @@
 #include "SceneManager.h"
 
+#include <string>
+#include <cstdio>
+
+#include <math.h>
+#include <stdio.h>
+
+#include "rapidjson/prettywriter.h"
+
+using namespace rapidjson;
+
 /*
 
     Chunks:
@@ -17,6 +27,7 @@ SceneManager::~SceneManager() {
     //dtor
 }
 
+/*
 void SceneManager::LoadScene() {
     FILE *f = fopen("scene1.scene", "rb");
     if(f == NULL)
@@ -27,7 +38,7 @@ void SceneManager::LoadScene() {
 
     Scene _scene;
 
-    _scene.header.name = new char[40]; //Allocate memory for name.
+    _scene.header.name = ""; //Allocate memory for name.
     fread(&_scene.header, sizeof(SceneHeader), 1, f);
 
     SceneData *dataToFill = new SceneData[_scene.header.dataLength];
@@ -51,84 +62,81 @@ void SceneManager::LoadScene() {
 
     cout << "Scene loaded " << "scene1.scene" << endl;
 }
-
+*/
 void SceneManager::UnloadScene() {
 }
 
 void SceneManager::UploadScene() {
-    FILE *f = fopen("scene1.scene", "wb");
-
-    if(f == NULL)
+    ofstream f;
+    f.open("scene1.scene");
+    if( !f.is_open() )
     {
-        cout << "Missing file, unable to read it" << endl;
+        cout << "Missing file, unable to read scene data" << endl;
         return;
     }
 
+    StringBuffer sb;
+    PrettyWriter<StringBuffer> writer(sb);
+
+    writer.StartObject();
+
     Scene _scene;
 
+
+    writer.String( "scene" );
     _scene.header.name = "Scene";
+    #if RAPIDJSON_HAS_STDSTRING
+        writer.String(_scene.header.name);
+    #else
+        writer.String(_scene.header.name.c_str(), static_cast<SizeType>(_scene.header.name.length())); // Supplying length of string is faster.
+    #endif
+
+    writer.String("dataLength");
     _scene.header.dataLength = 10;
+    writer.Int( _scene.header.dataLength );
+
+    writer.String("chunksNumber");
     _scene.header.chuncksNumber = 10;
+    writer.Int( _scene.header.chuncksNumber );
 
-    SceneData data[_scene.header.dataLength];
-    for(int i = 0; i < 10; i++) {
-        data[i].x = i * 2.0f;
-        data[i].y = i * 2.0f;
-        data[i].scale = 64;
-        data[i].texture = "textures/eagle.bmp";
+    writer.String( "chunks" );
+    writer.StartArray();
+    for(int i = 0; i < _scene.header.chuncksNumber; i++) {
+
+        Chunk chunk;
+
+        chunk.ID = i;
+        chunk.x = i * 2.0;
+        chunk.y = i * 2.0;
+
+        for ( int i = 0; i < 10;  i++ )
+        {
+            Sprite sprite;
+            sprite.SetPosition( i * 2.0f, i * 2.0f );
+            sprite.SetScale( 64 );
+            sprite.SetTexture( "textures/eagle.bmp" );
+            chunk.sprite.push_back( sprite );
+        }
+
+
+        _sceneChunks.push_back( chunk );
+        chunk.Serialize( writer );
+
     }
+    writer.EndArray();
+    writer.EndObject();
 
-    _scene.data = data;
+    f << sb.GetString();
 
-    fwrite(&_scene.header, sizeof(SceneHeader), 1, f);
-    fwrite(data, sizeof(SceneData), _scene.header.dataLength, f);
-    fclose(f);
+    f.close();
 
     cout << "Scene created scene1.scene" << endl;
-}
-
-void SceneManager::ConvertSceneToGameObjects() {
-    int dataLength = _currentScene.header.dataLength;
-    int chunkNumber = _currentScene.header.chuncksNumber;
-    _sceneGameObjects = new GameObject[dataLength];
-
-    for(int i = 0; i < dataLength; i++) {
-        SceneData sceneData = _currentScene.data[i];
-
-        GameObject go = GameObject(sceneData.x, sceneData.y, sceneData.texture);
-        _sceneGameObjects[i] = go;
-
-        for(int j = 0; j < chunkNumber; j++) {
-            Chunk chunk = _sceneChunks[j];
-            if(sqrt(pow(go.GetX() - chunk.x,2) + pow(go.GetY() - chunk.y,2)) <= 212.5) {
-                chunk.gameobject.push_back(go);
-                break;
-            }
-        }
-    }
-
-    cout << "Scene converted to gameObjects" << endl;
-}
-
-Scene SceneManager::GetActiveScene() {
-    cout << _currentScene.header.name << endl;
-    cout << _currentScene.header.dataLength << endl;
-    return _currentScene;
-}
-
-GameObject SceneManager::GetGameObjects(int _index) {
-    if(_index > sizeof(_sceneGameObjects)) {
-        cout << "Impossible to get gameobject at ID"  << _index << endl;
-        return GameObject();
-    }
-
-    return _sceneGameObjects[_index];
 }
 
 
 Chunk SceneManager::GetChunck(int _index) { return _sceneChunks[_index];}
 Chunk SceneManager::GetChunckByID(int _id) {
-    for(int i = 0; i < _currentScene.header.dataLength; i++) {
+    for(int i = 0; i < _sceneChunks.size(); i++) {
         if(_sceneChunks[i].ID == _id) {
             return _sceneChunks[i];
         }
@@ -136,7 +144,7 @@ Chunk SceneManager::GetChunckByID(int _id) {
 }
 
 Chunk SceneManager::GetNearstChunckFrom(float x, float y) {
-    for(int i = 0; i < _currentScene.header.dataLength; i++) {
+    for(int i = 0; i < _sceneChunks.size(); i++) {
         if(sqrt(pow(x - _sceneChunks[i].x, 2) + pow(y - _sceneChunks[i].y, 2)) <= 212.5) {
             return _sceneChunks[i];
         }

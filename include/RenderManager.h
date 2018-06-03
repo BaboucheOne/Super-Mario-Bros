@@ -1,14 +1,9 @@
 #ifndef RENDERMANAGER_H
 #define RENDERMANAGER_H
 
-#include <Global.h>
-
-#include <iostream>
-#include <fstream>
-#include <stdlib.h>
 #include <vector>
 
-#include <SDL2/SDL.h>
+#include "Chunk.h"
 
 struct ElementsInChunk {
     Chunk chunk;
