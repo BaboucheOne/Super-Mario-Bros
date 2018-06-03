@@ -15,56 +15,56 @@
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 2.0,
-                    "y": 2.0,
+                    "x": 64.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 4.0,
-                    "y": 4.0,
+                    "x": 128.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 6.0,
-                    "y": 6.0,
+                    "x": 192.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 8.0,
-                    "y": 8.0,
+                    "x": 256.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 10.0,
-                    "y": 10.0,
+                    "x": 320.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 12.0,
-                    "y": 12.0,
+                    "x": 384.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 14.0,
-                    "y": 14.0,
+                    "x": 448.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 16.0,
-                    "y": 16.0,
+                    "x": 512.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 18.0,
-                    "y": 18.0,
+                    "x": 576.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 }
@@ -82,56 +82,56 @@
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 2.0,
-                    "y": 2.0,
+                    "x": 64.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 4.0,
-                    "y": 4.0,
+                    "x": 128.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 6.0,
-                    "y": 6.0,
+                    "x": 192.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 8.0,
-                    "y": 8.0,
+                    "x": 256.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 10.0,
-                    "y": 10.0,
+                    "x": 320.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 12.0,
-                    "y": 12.0,
+                    "x": 384.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 14.0,
-                    "y": 14.0,
+                    "x": 448.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 16.0,
-                    "y": 16.0,
+                    "x": 512.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 18.0,
-                    "y": 18.0,
+                    "x": 576.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 }
@@ -149,56 +149,56 @@
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 2.0,
-                    "y": 2.0,
+                    "x": 64.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 4.0,
-                    "y": 4.0,
+                    "x": 128.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 6.0,
-                    "y": 6.0,
+                    "x": 192.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 8.0,
-                    "y": 8.0,
+                    "x": 256.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 10.0,
-                    "y": 10.0,
+                    "x": 320.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 12.0,
-                    "y": 12.0,
+                    "x": 384.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 14.0,
-                    "y": 14.0,
+                    "x": 448.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 16.0,
-                    "y": 16.0,
+                    "x": 512.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 18.0,
-                    "y": 18.0,
+                    "x": 576.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 }
@@ -216,56 +216,56 @@
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 2.0,
-                    "y": 2.0,
+                    "x": 64.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 4.0,
-                    "y": 4.0,
+                    "x": 128.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 6.0,
-                    "y": 6.0,
+                    "x": 192.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 8.0,
-                    "y": 8.0,
+                    "x": 256.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 10.0,
-                    "y": 10.0,
+                    "x": 320.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 12.0,
-                    "y": 12.0,
+                    "x": 384.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 14.0,
-                    "y": 14.0,
+                    "x": 448.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 16.0,
-                    "y": 16.0,
+                    "x": 512.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 18.0,
-                    "y": 18.0,
+                    "x": 576.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 }
@@ -283,56 +283,56 @@
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 2.0,
-                    "y": 2.0,
+                    "x": 64.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 4.0,
-                    "y": 4.0,
+                    "x": 128.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 6.0,
-                    "y": 6.0,
+                    "x": 192.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 8.0,
-                    "y": 8.0,
+                    "x": 256.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 10.0,
-                    "y": 10.0,
+                    "x": 320.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 12.0,
-                    "y": 12.0,
+                    "x": 384.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 14.0,
-                    "y": 14.0,
+                    "x": 448.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 16.0,
-                    "y": 16.0,
+                    "x": 512.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 18.0,
-                    "y": 18.0,
+                    "x": 576.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 }
@@ -350,56 +350,56 @@
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 2.0,
-                    "y": 2.0,
+                    "x": 64.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 4.0,
-                    "y": 4.0,
+                    "x": 128.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 6.0,
-                    "y": 6.0,
+                    "x": 192.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 8.0,
-                    "y": 8.0,
+                    "x": 256.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 10.0,
-                    "y": 10.0,
+                    "x": 320.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 12.0,
-                    "y": 12.0,
+                    "x": 384.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 14.0,
-                    "y": 14.0,
+                    "x": 448.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 16.0,
-                    "y": 16.0,
+                    "x": 512.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 18.0,
-                    "y": 18.0,
+                    "x": 576.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 }
@@ -417,56 +417,56 @@
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 2.0,
-                    "y": 2.0,
+                    "x": 64.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 4.0,
-                    "y": 4.0,
+                    "x": 128.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 6.0,
-                    "y": 6.0,
+                    "x": 192.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 8.0,
-                    "y": 8.0,
+                    "x": 256.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 10.0,
-                    "y": 10.0,
+                    "x": 320.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 12.0,
-                    "y": 12.0,
+                    "x": 384.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 14.0,
-                    "y": 14.0,
+                    "x": 448.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 16.0,
-                    "y": 16.0,
+                    "x": 512.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 18.0,
-                    "y": 18.0,
+                    "x": 576.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 }
@@ -484,56 +484,56 @@
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 2.0,
-                    "y": 2.0,
+                    "x": 64.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 4.0,
-                    "y": 4.0,
+                    "x": 128.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 6.0,
-                    "y": 6.0,
+                    "x": 192.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 8.0,
-                    "y": 8.0,
+                    "x": 256.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 10.0,
-                    "y": 10.0,
+                    "x": 320.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 12.0,
-                    "y": 12.0,
+                    "x": 384.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 14.0,
-                    "y": 14.0,
+                    "x": 448.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 16.0,
-                    "y": 16.0,
+                    "x": 512.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 18.0,
-                    "y": 18.0,
+                    "x": 576.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 }
@@ -551,56 +551,56 @@
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 2.0,
-                    "y": 2.0,
+                    "x": 64.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 4.0,
-                    "y": 4.0,
+                    "x": 128.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 6.0,
-                    "y": 6.0,
+                    "x": 192.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 8.0,
-                    "y": 8.0,
+                    "x": 256.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 10.0,
-                    "y": 10.0,
+                    "x": 320.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 12.0,
-                    "y": 12.0,
+                    "x": 384.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 14.0,
-                    "y": 14.0,
+                    "x": 448.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 16.0,
-                    "y": 16.0,
+                    "x": 512.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 18.0,
-                    "y": 18.0,
+                    "x": 576.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 }
@@ -618,56 +618,56 @@
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 2.0,
-                    "y": 2.0,
+                    "x": 64.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 4.0,
-                    "y": 4.0,
+                    "x": 128.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 6.0,
-                    "y": 6.0,
+                    "x": 192.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 8.0,
-                    "y": 8.0,
+                    "x": 256.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 10.0,
-                    "y": 10.0,
+                    "x": 320.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 12.0,
-                    "y": 12.0,
+                    "x": 384.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 14.0,
-                    "y": 14.0,
+                    "x": 448.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 16.0,
-                    "y": 16.0,
+                    "x": 512.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 },
                 {
-                    "x": 18.0,
-                    "y": 18.0,
+                    "x": 576.0,
+                    "y": 0.0,
                     "scale": 64,
                     "textures": "textures/eagle.bmp"
                 }

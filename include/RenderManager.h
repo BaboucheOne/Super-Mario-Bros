@@ -5,6 +5,12 @@
 
 #include "Chunk.h"
 
+/*
+
+    Cree une fonction qui regarde si un chunk est hors de porte pour le supprimer.
+
+*/
+
 struct ElementsInChunk {
     Chunk chunk;
     vector<SDL_Rect> rects;
@@ -22,6 +28,7 @@ class RenderManager
         void Exit();
 
         void SendChunk(Chunk _chunk);
+        void UnloadChunk(Chunk _chunk);
 
     protected:
 
@@ -35,7 +42,6 @@ class RenderManager
 
         void Init();
         bool CheckChunkEquality(Chunk _chunk); //Is this chunk already in the vector "_visibleChuncks" ?
-        void UnloadChunck();
 };
 
 #endif // RENDERMANAGER_H

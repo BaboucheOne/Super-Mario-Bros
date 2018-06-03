@@ -14,11 +14,8 @@ Chunk::~Chunk()
     //dtor
 }
 
-Chunk::Chunk(int _ID, int _x, int _y)
+Chunk::Chunk(int _ID, int _x, int _y) : ID(_ID), x(_x), y(_y)
 {
-    ID = _ID;
-    x = _x;
-    y = _y;
 }
 
 Chunk::Chunk(const Chunk& c)

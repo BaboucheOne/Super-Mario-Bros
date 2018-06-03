@@ -1,14 +1,17 @@
 #include "RenderManager.h"
 
-RenderManager::RenderManager() : width(600), height(850)  {
+RenderManager::RenderManager() : width(600), height(850)
+{
     Init();
 }
 
-RenderManager::RenderManager(unsigned int _width, unsigned int _height) : width(_width), height(_height) {
+RenderManager::RenderManager(unsigned int _width, unsigned int _height) : width(_width), height(_height)
+{
     Init();
 }
 
-void RenderManager::Init() {
+void RenderManager::Init()
+{
 
     if (SDL_VideoInit(NULL) < 0) {
 		cout << "Can't create SDL video " << SDL_GetError() << endl;
@@ -25,7 +28,8 @@ void RenderManager::Init() {
 
 }
 
-void RenderManager::Update() {
+void RenderManager::Update()
+{
 
 		SDL_RenderClear(renderer);
 
@@ -48,7 +52,8 @@ void RenderManager::Update() {
 
 }
 
-bool RenderManager::CheckChunkEquality(Chunk _chunk) {
+bool RenderManager::CheckChunkEquality(Chunk _chunk)
+{
 
     if(_visibleChuncks.size() == 0) {
         return true;
@@ -63,8 +68,8 @@ bool RenderManager::CheckChunkEquality(Chunk _chunk) {
     return false;
 }
 
-void RenderManager::SendChunk(Chunk _chunk) {
-
+void RenderManager::SendChunk(Chunk _chunk)
+{
     if(!CheckChunkEquality(_chunk)) { return; }
 
     unsigned int goSize = _chunk.sprite.size();
@@ -73,11 +78,11 @@ void RenderManager::SendChunk(Chunk _chunk) {
     new_element.chunk = _chunk;
 
     for(unsigned int i = 0; i < goSize; i++) {
-        Sprite go = _chunk.sprite.at(i);
-        unsigned scale = go.GetScale();
+        Sprite sprt = _chunk.sprite.at(i);
+        unsigned scale = sprt.GetScale();
 
-        SDL_Rect rect = {(int)go.GetX(), (int)go.GetY(), (int)scale, (int)scale};
-        SDL_Surface* surface = SDL_LoadBMP(go.GetTexture().c_str());
+        SDL_Rect rect = {(int)sprt.GetX(), (int)sprt.GetY(), (int)scale, (int)scale};
+        SDL_Surface* surface = SDL_LoadBMP(sprt.GetTexture().c_str());
 
         if(surface == NULL) {
             cout << SDL_GetError() << endl;
@@ -96,16 +101,28 @@ void RenderManager::SendChunk(Chunk _chunk) {
     }
 
     _visibleChuncks.push_back(new_element);
-
-    //SDL_DestroyTexture(texture);
 }
 
-void RenderManager::Exit() {
+void RenderManager::UnloadChunk(Chunk _chunk)
+{
+    for(unsigned int i = 0; i < _visibleChuncks.size(); i++) {
+        if(_visibleChuncks.at(i).chunk.ID == _chunk.ID) {
+            delete(&_visibleChuncks[i]);
+            break;
+        }
+    }
+}
+
+void RenderManager::Exit()
+{
+    delete[] &_visibleChuncks;
+
     SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
 	SDL_Quit();
 }
 
-RenderManager::~RenderManager() {
+RenderManager::~RenderManager()
+{
     Exit();
 }

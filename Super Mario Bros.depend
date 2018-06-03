@@ -581,7 +581,7 @@
 	"rapidjson/prettywriter.h"
 	"Chunk.h"
 
-1528053492 source:c:\users\admin\documents\github\super-mario-bros\main.cpp
+1528056592 source:c:\users\admin\documents\github\super-mario-bros\main.cpp
 	<fstream>
 	<iostream>
 	<vector>
@@ -692,7 +692,7 @@
 
 1528051995 c:\users\admin\documents\github\super-mario-bros\include\global.h
 
-1528051995 c:\users\admin\documents\github\super-mario-bros\include\scenemanager.h
+1528056889 c:\users\admin\documents\github\super-mario-bros\include\scenemanager.h
 	<fstream>
 	<iostream>
 	<vector>
@@ -706,18 +706,18 @@
 	<vector>
 	"Sprite.h"
 
-1528053885 c:\users\admin\documents\github\super-mario-bros\include\rendermanager.h
+1528056719 c:\users\admin\documents\github\super-mario-bros\include\rendermanager.h
 	<vector>
 	"Chunk.h"
 
-1528051995 source:c:\users\admin\documents\github\super-mario-bros\src\chunk.cpp
+1528056870 source:c:\users\admin\documents\github\super-mario-bros\src\chunk.cpp
 	"rapidjson/prettywriter.h"
 	"Chunk.h"
 
-1528051995 source:c:\users\admin\documents\github\super-mario-bros\src\rendermanager.cpp
+1528056525 source:c:\users\admin\documents\github\super-mario-bros\src\rendermanager.cpp
 	"RenderManager.h"
 
-1528051995 source:c:\users\admin\documents\github\super-mario-bros\src\scenemanager.cpp
+1528056648 source:c:\users\admin\documents\github\super-mario-bros\src\scenemanager.cpp
 	"SceneManager.h"
 	<string>
 	<cstdio>

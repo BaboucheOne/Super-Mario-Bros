@@ -112,7 +112,7 @@ void SceneManager::CreateScene() {
         for ( int i = 0; i < 10;  i++ )
         {
             Sprite sprite;
-            sprite.SetPosition( i * 2.0f, i * 2.0f );
+            sprite.SetPosition( i * 64.0f, 0 );
             sprite.SetScale( 64 );
             sprite.SetTexture( "textures/eagle.bmp" );
             chunk.sprite.push_back( sprite );
