@@ -39,7 +39,7 @@ class Sprite
         float x;
         float y;
         int scale;
-        std::string texture = "";
+        std::string texture;
 };
 
 #endif // Sprite_H

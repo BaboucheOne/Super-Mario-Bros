@@ -1,6 +1,6 @@
 #include "RenderManager.h"
 
-RenderManager::RenderManager() : height(850), width(600) {
+RenderManager::RenderManager() : width(600), height(850)  {
     Init();
 }
 
@@ -36,9 +36,9 @@ void RenderManager::Update() {
 		SDL_RenderCopy(renderer,text_img,NULL,&dest);
 		*/
 
-		for(int i = 0; i < _visibleChuncks.size(); i++) {
+		for(unsigned int i = 0; i < _visibleChuncks.size(); i++) {
 		    ElementsInChunk elementToDraw = _visibleChuncks.at(i);
-            for(int j = 0; j < elementToDraw.rects.size(); j++) {
+            for(unsigned int j = 0; j < elementToDraw.rects.size(); j++) {
                 SDL_RenderCopy(renderer, elementToDraw.textures.at(j), NULL, &elementToDraw.rects.at(j));
             }
 		}
@@ -76,7 +76,7 @@ void RenderManager::SendChunk(Chunk _chunk) {
         Sprite go = _chunk.sprite.at(i);
         unsigned scale = go.GetScale();
 
-        SDL_Rect rect = {go.GetX(), go.GetX(), scale, scale};
+        SDL_Rect rect = {(int)go.GetX(), (int)go.GetY(), (int)scale, (int)scale};
         SDL_Surface* surface = SDL_LoadBMP(go.GetTexture().c_str());
 
         if(surface == NULL) {

@@ -27,7 +27,7 @@ class RenderManager
     protected:
 
     private:
-        unsigned int renderDistance = 350;
+        unsigned int renderDistance;
         unsigned int width;
         unsigned int height;
         SDL_Window* window;

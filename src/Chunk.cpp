@@ -40,7 +40,7 @@ void Chunk::Serialize( PrettyWriter<StringBuffer>& writer )
     writer.Int( y );
     writer.String("sprites");
     writer.StartArray();
-    for ( int i = 0; i < sprite.size(); i++ )
+    for ( unsigned int i = 0; i < sprite.size(); i++ )
     {
         sprite[i].Serialize( writer );
     }
