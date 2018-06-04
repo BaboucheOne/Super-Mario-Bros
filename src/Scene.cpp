@@ -6,7 +6,12 @@ using namespace std;
 
 Scene::Scene()
 {
-    //ctor
+    Scene("default");
+}
+
+Scene::Scene( string _name )
+{
+    name = _name;
 }
 
 Scene::~Scene()
