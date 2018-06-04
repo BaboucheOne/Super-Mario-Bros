@@ -6,8 +6,13 @@ class Scene
 {
     public:
         Scene();
+        Scene( std::string _name );
         virtual ~Scene();
-
+        
+        Save( );
+        Save( std::string filename );
+        Save( std::string path, std::string filename );
+        
         std::string Getname();
         void Setname(std::string val);
 
