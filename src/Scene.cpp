@@ -19,6 +19,54 @@ Scene::~Scene()
     //dtor
 }
 
+void Scene::Save()
+{
+    Save( "", name );
+}
+
+void Scene::Save( string filename )
+{
+    Save( "", filename );
+}
+
+void Scene::Save( string path, string filename )
+{
+    ofstream f;
+    string filepath = path + filename + ".scene";
+    f.open( filepath.c_str() );
+    if( !f.is_open() )
+    {
+        cout << "Unable to create file \""<< filepath << "\", scene not saved " << endl;
+        return;
+    }
+    
+    StringBuffer sb;
+    PrettyWriter<StringBuffer> writer( sb );
+
+    writer.StartObject();
+    
+    writer.String("scene");
+    #if RAPIDJSON_HAS_STDSTRING
+        writer.String( name );
+    #else
+        writer.String( name.c_str(), static_cast<SizeType>(name.length())); // Supplying length of string is faster.
+    #endif
+    writer.String("chunks")
+    writer.StartArray();
+    for ( vector<int>::iterator it = sceneChunks.begin() ; it != sceneChunks.end(); ++it) {
+        it->Serialize( writer );
+    }
+    writer.EndArray();
+    writer.EndObject();
+    
+    f << sb.GetString();
+    
+    f.close();
+    
+    cout << "saved scene \"" << name << "\" as \"" << filename << "\" at \"" << path << "\"" << endl ;
+    
+}
+
 std::string Scene::Getname()
 {
     return name;
