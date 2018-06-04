@@ -29,6 +29,23 @@ void Scene::Save( string filename )
     Save( "", filename );
 }
 
+void Scene::Load( string filename )
+{
+    Load( "", filename) 
+}
+
+void Scene::Load( string path, string filename )
+{
+    ifstream f;
+    string filepath = path + filename + ".sccene";
+    if( !f.is_open() )
+    {
+        cout << "Unable to load file \""<< filepath << "\", scene not loaded " << endl;
+        return;
+    }
+    f.close();
+}
+
 void Scene::Save( string path, string filename )
 {
     ofstream f;
@@ -53,8 +70,10 @@ void Scene::Save( string path, string filename )
     #endif
     writer.String("chunks")
     writer.StartArray();
-    for ( vector<int>::iterator it = sceneChunks.begin() ; it != sceneChunks.end(); ++it) {
-        it->Serialize( writer );
+    if ( sceneChunks.size() > 0 ) {
+        for ( vector<int>::iterator it = sceneChunks.begin() ; it != sceneChunks.end(); ++it) {
+            it->Serialize( writer );
+        }
     }
     writer.EndArray();
     writer.EndObject();
