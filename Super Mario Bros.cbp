@@ -39,9 +39,8 @@
 			<Add directory="F:/Programmes/CodeBlocks/Libraries/SDL2_32bits/lib" />
 		</Linker>
 		<Unit filename="include/Chunk.h" />
-		<Unit filename="include/Global.h" />
 		<Unit filename="include/RenderManager.h" />
-		<Unit filename="include/SceneManager.h" />
+		<Unit filename="include/Scene.h" />
 		<Unit filename="include/Sprite.h" />
 		<Unit filename="include/rapidjson/allocators.h" />
 		<Unit filename="include/rapidjson/cursorstreamwrapper.h" />
@@ -82,7 +81,7 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Chunk.cpp" />
 		<Unit filename="src/RenderManager.cpp" />
-		<Unit filename="src/SceneManager.cpp" />
+		<Unit filename="src/Scene.cpp" />
 		<Unit filename="src/Sprite.cpp" />
 		<Extensions>
 			<code_completion />
