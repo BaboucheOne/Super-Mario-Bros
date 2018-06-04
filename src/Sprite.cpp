@@ -23,6 +23,11 @@ Sprite::Sprite(const Sprite& go) {
     SetTexture(texture);
 }
 
+Sprite Sprite::operator=( const Sprite& s )
+{
+    return Sprite( s );
+}
+
 void Sprite::SetTexture( std::string _texturePath) {
     struct stat fileAtt;
     if(stat( _texturePath.c_str(), &fileAtt) != 0) {

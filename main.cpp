@@ -14,8 +14,7 @@ using namespace std;
 
 
 #include "Sprite.h"
-#include "Global.h"
-#include "SceneManager.h"
+#include "Scene.h"
 #include "RenderManager.h"
 
 
@@ -24,12 +23,21 @@ int main(int argc, char *argv[]) {
 
     RenderManager _rendererManager(600, 850);
 
-    SceneManager _sceneManager;
-	_sceneManager.CreateScene( "scene1" );
-	//_sceneManager.LoadScene();
-	Chunk c = _sceneManager.GetChunckByID(0);
+    Scene _scene = Scene( "scene1" );
+    Chunk chunk = Chunk( 1, 10, 10 );
+    chunk.sprite.push_back( Sprite( 0, 0, "textures/eagle.bmp" ) );
+    _scene.AddChunk( chunk );
+
+    _scene.Save();
+
+	Chunk* chunkPointer = _scene.GetChunk(0);
+	if ( chunkPointer == NULL ) {
+	    cout << "chunk pointer is NULL , terminating" << endl;
+	    return EXIT_FAILURE;
+	}
+	Chunk c = *chunkPointer;
 	cout << c.sprite.size() << endl;
-	_rendererManager.SendChunk(c);
+	_rendererManager.SendChunk( c );
 	//_rendererManager.UnloadChunk(c);
 
     bool running = true;

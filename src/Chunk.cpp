@@ -3,6 +3,7 @@
 #include "Chunk.h"
 
 using namespace rapidjson;
+using namespace std;
 
 Chunk::Chunk()
 {
@@ -26,6 +27,11 @@ Chunk::Chunk(const Chunk& c)
     sprite.assign( c.sprite.begin(), c.sprite.end() );
 }
 
+Chunk Chunk::operator = (const Chunk& x)
+{
+    return Chunk( x );
+}
+
 void Chunk::Serialize( PrettyWriter<StringBuffer>& writer )
 {
     writer.StartObject();
@@ -37,9 +43,13 @@ void Chunk::Serialize( PrettyWriter<StringBuffer>& writer )
     writer.Int( y );
     writer.String("sprites");
     writer.StartArray();
-    for ( unsigned int i = 0; i < sprite.size(); i++ )
-    {
-        sprite[i].Serialize( writer );
+    cout << "saving sprites" << endl;
+    if ( sprite.size() > 0 ) {
+        for ( unsigned int i = 0; i < sprite.size(); i++ )
+        {
+            sprite[i].Serialize( writer );
+            cout << "sprite " << i << endl;
+        }
     }
     writer.EndArray();
     writer.EndObject();

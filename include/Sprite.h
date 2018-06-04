@@ -26,6 +26,7 @@ class Sprite
 
         void Serialize( rapidjson::PrettyWriter<rapidjson::StringBuffer>& writer );
 
+        Sprite operator=( const Sprite& s );
 
         float GetX();
         float GetY();

@@ -1,6 +1,9 @@
 #ifndef SCENE_H
 #define SCENE_H
 
+#include <string>
+
+#include "Chunk.h"
 
 class Scene
 {
@@ -8,20 +11,23 @@ class Scene
         Scene();
         Scene( std::string _name );
         virtual ~Scene();
-        
-        Save( );
-        Save( std::string filename );
-        Save( std::string path, std::string filename );
-        
+
+        void Save( );
+        void Save( std::string filename );
+        void Save( std::string path, std::string filename );
+
+        void Load( std::string filename );
+        void Load( std::string path, std::string filename );
+
         std::string Getname();
         void Setname(std::string val);
 
-        Chunk GetChunks( unsigned int id );
+        Chunk* GetChunk( unsigned int id );
 
-        int AddChunks( Chunk val );
-        void RemoveChunks( unsigned int id );
-        void InsertChunks( unsigned int id, Chunk val);
-        void SetChunks( unsigned int id, Chunk val );
+        void AddChunk( Chunk val );
+        void RemoveChunk( unsigned int id );
+        void InsertChunk( unsigned int id, Chunk val);
+        void SetChunk( unsigned int id, Chunk val );
 
     protected:
 

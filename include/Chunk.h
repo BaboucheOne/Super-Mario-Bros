@@ -21,6 +21,8 @@ class Chunk {
         int y;
         std::vector <Sprite> sprite;
 
+        Chunk operator= (const Chunk& c);
+
     protected:
 
     private:

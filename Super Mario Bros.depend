@@ -373,7 +373,7 @@
 	<vector>
 	"GameObject.h"
 
-1528058680 source:d:\utilisateurs\martin\documents\github\super-mario-bros\main.cpp
+1528126417 source:d:\utilisateurs\martin\documents\github\super-mario-bros\main.cpp
 	<fstream>
 	<iostream>
 	<vector>
@@ -384,8 +384,7 @@
 	<SDL2/SDL.h>
 	<cstdio>
 	"Sprite.h"
-	"Global.h"
-	"SceneManager.h"
+	"Scene.h"
 	"RenderManager.h"
 
 1528058324 d:\utilisateurs\martin\documents\github\super-mario-bros\include\scenemanager.h
@@ -556,7 +555,7 @@
 	<utility>
 	"internal/stack.h"
 
-1528057569 d:\utilisateurs\martin\documents\github\super-mario-bros\include\sprite.h
+1528126212 d:\utilisateurs\martin\documents\github\super-mario-bros\include\sprite.h
 	<fstream>
 	<iostream>
 	<string>
@@ -568,16 +567,16 @@
 1527895204 d:\utilisateurs\martin\documents\github\super-mario-bros\include\rapidjson\prettywriter.h
 	"writer.h"
 
-1528057600 source:d:\utilisateurs\martin\documents\github\super-mario-bros\src\sprite.cpp
+1528126265 source:d:\utilisateurs\martin\documents\github\super-mario-bros\src\sprite.cpp
 	"Sprite.h"
 
-1528057578 d:\utilisateurs\martin\documents\github\super-mario-bros\include\chunk.h
+1528126136 d:\utilisateurs\martin\documents\github\super-mario-bros\include\chunk.h
 	"rapidjson/prettywriter.h"
 	<string>
 	<vector>
 	"Sprite.h"
 
-1528057103 source:d:\utilisateurs\martin\documents\github\super-mario-bros\src\chunk.cpp
+1528127089 source:d:\utilisateurs\martin\documents\github\super-mario-bros\src\chunk.cpp
 	"rapidjson/prettywriter.h"
 	"Chunk.h"
 
@@ -727,4 +726,12 @@
 
 1528051995 source:c:\users\admin\documents\github\super-mario-bros\src\sprite.cpp
 	"Sprite.h"
+
+1528126762 source:d:\utilisateurs\martin\documents\github\super-mario-bros\src\scene.cpp
+	"Scene.h"
+	"rapidjson/prettywriter.h"
+
+1528126358 d:\utilisateurs\martin\documents\github\super-mario-bros\include\scene.h
+	<string>
+	"Chunk.h"
 
