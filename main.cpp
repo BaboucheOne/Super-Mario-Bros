@@ -14,6 +14,7 @@ using namespace std;
 
 
 #include "Sprite.h"
+#include "Chunk.h"
 #include "Scene.h"
 #include "RenderManager.h"
 

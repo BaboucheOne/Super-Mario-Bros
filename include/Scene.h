@@ -23,7 +23,7 @@ class Scene
         void Setname(std::string val);
 
         Chunk* GetChunk( unsigned int id );
-
+        Chunk* GetNearestChunk( int _x, int _y );
         void AddChunk( Chunk val );
         void RemoveChunk( unsigned int id );
         void InsertChunk( unsigned int id, Chunk val);

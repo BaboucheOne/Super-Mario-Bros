@@ -1,3 +1,5 @@
+#include <math.h>
+
 #include "Scene.h"
 #include "rapidjson/prettywriter.h"
 
@@ -105,6 +107,21 @@ Chunk* Scene::GetChunk( unsigned int id )
     }
     return NULL;
 }
+
+Chunk* Scene::GetNearestChunk( int _x, int _y )
+{
+    unsigned int minDist = INT_MAX;
+    Chunk* nearestChunk;
+    for ( unsigned int i = 0; i < sceneChunks.size(); i++ ) {
+        unsigned int dist = pow( _x - sceneChunks[i].x, 2) + pow( _y - sceneChunks[i].y, 2);
+        if ( dist < minDist ) {
+            minDist = dist;
+            nearestChunk = GetChunk( i );
+        }
+    }
+    return nearestChunk;
+}
+
 void Scene::AddChunk( Chunk val )
 {
     sceneChunks.push_back( val );
